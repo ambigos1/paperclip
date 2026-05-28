@@ -208,7 +208,7 @@ describe("claude execute", () => {
     try {
       await execute({
         runId: "run-fresh",
-        agent: { id: "agent-1", companyId: "co-1", name: "Test", adapterType: "claude_local", adapterConfig: {} },
+        agent: { id: "agent-1", companyId: "co-1", name: "Test", role: "engineer", adapterType: "claude_local", adapterConfig: {} },
         runtime: { sessionId: null, sessionParams: null, sessionDisplayId: null, taskKey: null },
         config: {
           command: commandPath,
@@ -238,7 +238,7 @@ describe("claude execute", () => {
     try {
       await execute({
         runId: "run-resume",
-        agent: { id: "agent-1", companyId: "co-1", name: "Test", adapterType: "claude_local", adapterConfig: {} },
+        agent: { id: "agent-1", companyId: "co-1", name: "Test", role: "engineer", adapterType: "claude_local", adapterConfig: {} },
         runtime: { sessionId: "claude-session-1", sessionParams: null, sessionDisplayId: null, taskKey: null },
         config: {
           command: commandPath,
@@ -276,7 +276,7 @@ describe("claude execute", () => {
     try {
       await execute({
         runId: "run-notes-fresh",
-        agent: { id: "agent-1", companyId: "co-1", name: "Test", adapterType: "claude_local", adapterConfig: {} },
+        agent: { id: "agent-1", companyId: "co-1", name: "Test", role: "engineer", adapterType: "claude_local", adapterConfig: {} },
         runtime: { sessionId: null, sessionParams: null, sessionDisplayId: null, taskKey: null },
         config: {
           command: commandPath,
@@ -306,7 +306,7 @@ describe("claude execute", () => {
     try {
       await execute({
         runId: "run-notes-resume",
-        agent: { id: "agent-1", companyId: "co-1", name: "Test", adapterType: "claude_local", adapterConfig: {} },
+        agent: { id: "agent-1", companyId: "co-1", name: "Test", role: "engineer", adapterType: "claude_local", adapterConfig: {} },
         runtime: { sessionId: "claude-session-1", sessionParams: null, sessionDisplayId: null, taskKey: null },
         config: {
           command: commandPath,
@@ -338,7 +338,7 @@ describe("claude execute", () => {
     try {
       const result = await execute({
         runId: "run-resume-fallback",
-        agent: { id: "agent-1", companyId: "co-1", name: "Test", adapterType: "claude_local", adapterConfig: {} },
+        agent: { id: "agent-1", companyId: "co-1", name: "Test", role: "engineer", adapterType: "claude_local", adapterConfig: {} },
         runtime: { sessionId: "claude-session-1", sessionParams: null, sessionDisplayId: null, taskKey: null },
         config: {
           command: commandPath,
@@ -407,7 +407,7 @@ describe("claude execute", () => {
     try {
       const result = await execute({
         runId: "run-max-turns",
-        agent: { id: "agent-1", companyId: "co-1", name: "Test", adapterType: "claude_local", adapterConfig: {} },
+        agent: { id: "agent-1", companyId: "co-1", name: "Test", role: "engineer", adapterType: "claude_local", adapterConfig: {} },
         runtime: { sessionId: null, sessionParams: null, sessionDisplayId: null, taskKey: null },
         config: {
           command: commandPath,
@@ -446,7 +446,7 @@ describe("claude execute", () => {
     try {
       const result = await execute({
         runId: "run-max-turns-text",
-        agent: { id: "agent-1", companyId: "co-1", name: "Test", adapterType: "claude_local", adapterConfig: {} },
+        agent: { id: "agent-1", companyId: "co-1", name: "Test", role: "engineer", adapterType: "claude_local", adapterConfig: {} },
         runtime: { sessionId: null, sessionParams: null, sessionDisplayId: null, taskKey: null },
         config: {
           command: commandPath,
@@ -481,7 +481,7 @@ describe("claude execute", () => {
     try {
       const result = await execute({
         runId: "run-max-turns-fallback-text",
-        agent: { id: "agent-1", companyId: "co-1", name: "Test", adapterType: "claude_local", adapterConfig: {} },
+        agent: { id: "agent-1", companyId: "co-1", name: "Test", role: "engineer", adapterType: "claude_local", adapterConfig: {} },
         runtime: { sessionId: null, sessionParams: null, sessionDisplayId: null, taskKey: null },
         config: {
           command: commandPath,
